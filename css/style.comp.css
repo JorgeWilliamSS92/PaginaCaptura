@@ -9,4 +9,12 @@ html {
   font-size: 62.5%;
 }
 
+.container1 {
+  background-color: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/64957938a8a62d8071397ed5_pgc-python-bg1.webp);
+}
+.container1__div {
+  width: 30%;
+  background-color: red;
+}
+
 /*# sourceMappingURL=style.comp.css.map */

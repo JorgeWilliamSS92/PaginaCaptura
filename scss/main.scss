@@ -3,6 +3,9 @@ $blue-lighten: #038fc2; //use on the check
 $yellow: #ffd24a; //used on the buttons
 $blue-darken: #256783; //used on the title, subtitles ...
 $blue-darkest: #1c415c; //used on container1
+$gray: #4b4d4d;
+$gray-darken: darken($gray, 10%);
+$gray-lighten: lighten($gray, 10%);
 
 @mixin display_flex_align_justify_gap(
   $display: flex,
@@ -26,4 +29,119 @@ $blue-darkest: #1c415c; //used on container1
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 62.5%;
+}
+
+//container1
+.container1 {
+  @include display_flex_align_justify_gap($gap: 0rem);
+  background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/64957938a8a62d8071397ed5_pgc-python-bg1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 45%;
+  padding-top: 5rem;
+
+  &__div-master {
+    @include display_flex_align_justify_gap($flow: row, $gap: 0rem);
+    width: 70%;
+  }
+  &__div {
+    @include display_flex_align_justify_gap($gap: 0rem);
+    width: 40%;
+    background-color: white;
+    box-shadow: inset 0rem 0rem 2rem $gray-lighten;
+    position: relative;
+    padding: 3rem 3rem;
+    border-radius: 3rem;
+    margin-right: -5rem;
+  }
+  &__img {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0rem 0rem 1rem $gray;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 13%;
+    height: 12.5%;
+    right: -1.8rem;
+    top: -1.8rem;
+  }
+
+  &__h1 {
+    font-size: 5rem;
+    text-align: center;
+    color: $blue-darkest;
+  }
+
+  &__p {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: darken($gray, 10%);
+    margin-bottom: 1rem;
+  }
+
+  &__ul {
+    @include display_flex_align_justify_gap($gap: 0.5rem);
+    font-size: 2rem;
+    list-style: none;
+    margin: 1rem 0rem;
+
+    & li {
+      color: $gray-lighten;
+    }
+    & svg {
+      color: $blue-lighten;
+    }
+    & span {
+      font-weight: 700;
+      color: $gray;
+    }
+  }
+
+  &__h2 {
+    font-size: 3rem;
+    color: $gray;
+    margin-top: 0.5rem;
+  }
+  &__button {
+    background-color: $yellow;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5rem 3rem;
+    border-radius: 3rem;
+    margin: 2rem 0rem 1rem 0rem;
+    border: 0.2rem solid black;
+    border-bottom-width: 0.4rem;
+    border-right-width: 0.4rem;
+    cursor: pointer;
+
+    &:hover {
+      border: 0.3rem solid black;
+    }
+  }
+
+  &__div2 {
+    width: 55%;
+    margin-left: -5rem;
+    &__img {
+      width: 100%;
+    }
+  }
+}
+
+//container2
+.container2 {
+  @include display_flex_align_justify_gap();
+  background-color: lighten($gray-lighten, 45%);
+  padding: 5rem 0rem;
+
+  &__div3 {
+    width: 60%;
+    &__p {
+      font-size: 1.5rem;
+      font-weight: 100;
+      color: $gray-lighten;
+    }
+  }
 }
