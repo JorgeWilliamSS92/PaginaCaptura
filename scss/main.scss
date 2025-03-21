@@ -23,15 +23,15 @@ $gray-lighten: lighten($gray, 10%);
 
 @mixin screenView($parameter) {
   @if $parameter == "smallest" {
-    @media (max-width: 380px) {
+    @media (max-width: 459px) {
       @content;
     }
   } @else if $parameter == "small" {
-    @media (max-width: 480px) {
+    @media (max-width: 665px) {
       @content;
     }
   } @else if $parameter == "medium-small" {
-    @media (max-width: 560px) {
+    @media (max-width: 830px) {
       @content;
     }
   } @else if $parameter == "medium" {
@@ -39,36 +39,40 @@ $gray-lighten: lighten($gray, 10%);
       @content;
     }
   } @else if $parameter == "medium-big" {
-    @media (max-width: 1030px) {
+    @media (max-width: 1105px) {
+      @content;
+    }
+  } @else if $parameter == "big-small" {
+    @media (max-width: 1270px) {
       @content;
     }
   } @else if $parameter == "big" {
-    @media (max-width: 1251px) {
+    @media (max-width: 1379px) {
       @content;
     }
-  } @else {
-    @media (max-width: 1382px) {
+  } @else if $parameter == "biggest" {
+    @media (max-width: 1654px) {
       @content;
     }
   }
 }
 
 /*
-  @include screenView(biggest) //{ (1382px)
+  @include screenView(biggest) //{ (1654px)
     }
     @include screenView(big) { //(1251px)
     }
-    @include screenView(medium-big) { //(1030px)
+    @include screenView(big-small) { //(1270px)
+    }
+    @include screenView(medium-big) { //(1105px)
     }
     @include screenView(medium) { //(877px)
     }
-    @include screenView(medium-small) {
+    @include screenView(medium-small) { //(813px)
     }
-    @include screenView(medium-small) {
-    }
-    @include screenView(small) {
-    }
-    @include screenView(smallest) {
+      @include screenView(small) { //(665px)
+      }
+    @include screenView(smallest) { //(459)
     }
 */
 
@@ -88,29 +92,62 @@ html {
   background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/64957938a8a62d8071397ed5_pgc-python-bg1.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 45%;
+  background-position: 40%;
   padding-top: 5rem;
 
   @include screenView(medium-big) {
     //(1030px)
     padding-top: 2rem;
   }
+  @include screenView(medium-small) {
+    //(813px)
+    background-position: 90%;
+  }
 
   &__div-master {
     @include display_flex_align_justify_gap($flow: row, $gap: 0rem);
-    width: 80%;
+    width: 60%;
 
     @include screenView(biggest) {
-      width: 95%;
+      //(1654px)
+      width: 65%;
     }
     @include screenView(big) {
+      //(1251px)
+      width: 70%;
+    }
+    @include screenView(big-small) {
+      //(1270px)
+      width: 80%;
+    }
+
+    @include screenView(medium-big) {
+      //(1030px)
+      width: 85%;
+    }
+    @include screenView(medium) {
+      //(877px)
+      width: 90%;
+    }
+    @include screenView(medium-small) {
+      //(813px)
+      @include display_flex_align_justify_gap($flow: column, $gap: 3rem);
+      margin-top: 5rem;
+      width: 95%;
+    }
+    @include screenView(small) {
+      //(665px)
       width: 100%;
     }
+    // @include screenView(smallest) {
+    //   //(459)
+    // }
   }
+
   &__div {
     @include display_flex_align_justify_gap($gap: 0rem);
-    min-width: 35%;
-    max-width: 35%;
+    flex-wrap: wrap;
+    width: 45%;
     background-color: white;
     box-shadow: inset 0rem 0rem 2rem $gray-lighten;
     position: relative;
@@ -118,17 +155,38 @@ html {
     border-radius: 3rem;
     margin-right: -5rem;
 
+    @include screenView(big) {
+      //(1251px)
+      width: 45%;
+    }
+
+    @include screenView(big-small) {
+      //(1270px)
+      max-width: 60%;
+    }
+
     @include screenView(medium-big) {
       //(1030px)
-      min-width: 45%;
       max-width: 45%;
     }
 
     @include screenView(medium) {
       //(877px)
       padding: 1.5rem;
+      max-width: 50%;
+    }
+    @include screenView(medium-small) {
+      //(813px)
+      margin-right: 0rem;
       min-width: 50%;
-      max-width: 40%;
+    }
+    @include screenView(small) {
+      //(665px)
+      min-width: 60%;
+    }
+    @include screenView(smallest) {
+      //(459)
+      min-width: 85%;
     }
   }
   &__img {
@@ -137,20 +195,20 @@ html {
     box-shadow: 0rem 0rem 1rem $gray;
     padding: 1rem;
     border-radius: 50%;
-    width: 7rem;
-    height: 7rem;
+    width: 6rem;
+    height: 6rem;
     right: -2rem;
     top: -2rem;
 
     @include screenView(biggest) {
-      width: 6.5rem;
-      height: 6.5rem;
+      width: 5.5rem;
+      height: 5.5rem;
     }
 
     @include screenView(medium-big) {
       //(1030px)
-      width: 6rem;
-      height: 6rem;
+      width: 5rem;
+      height: 5rem;
     }
     @include screenView(medium) {
       //(877px)
@@ -159,16 +217,25 @@ html {
       right: -1rem;
       top: -1rem;
     }
+    @include screenView(small) {
+      //(665px)
+      width: 5rem;
+      height: 5rem;
+    }
   }
 
   &__h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     text-align: center;
     color: $blue-darkest;
     margin-bottom: 1rem;
-    width: 90%;
+    width: 95%;
 
     @include screenView(biggest) {
+      font-size: 4rem;
+    }
+    @include screenView(big-small) {
+      //(1270px)
       font-size: 3.5rem;
     }
     @include screenView(medium-big) {
@@ -178,8 +245,13 @@ html {
     }
     @include screenView(medium) {
       //(877px)
-      font-size: 2rem;
+      font-size: 3rem;
       margin-bottom: 0.2rem;
+    }
+    @include screenView(small) {
+      //(665px)
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -191,7 +263,7 @@ html {
     margin-bottom: 1rem;
 
     @include screenView(biggest) {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     @include screenView(medium-big) {
       //(1030px)
@@ -203,16 +275,21 @@ html {
       font-size: 1.6rem;
       margin-bottom: 0.2rem;
     }
+    @include screenView(small) {
+      //(665px)
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__ul {
     @include display_flex_align_justify_gap($gap: 0.5rem);
-    font-size: 1.8rem;
+    font-size: 2rem;
     list-style: none;
     margin: 1rem 0rem;
 
     @include screenView(biggest) {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
     @include screenView(medium-big) {
       //(1030px)
@@ -223,6 +300,11 @@ html {
       //(877px)
       font-size: 1.4rem;
       margin-bottom: 0.2rem;
+    }
+    @include screenView(small) {
+      //(665px)
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
     & li {
@@ -238,7 +320,7 @@ html {
   }
 
   &__h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: $gray;
     margin-top: 0.5rem;
     @include screenView(biggest) {
@@ -254,6 +336,11 @@ html {
       font-size: 1.6rem;
       margin-top: 1rem;
     }
+    @include screenView(small) {
+      //(665px)
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
   }
   &__button {
     background-color: $yellow;
@@ -262,7 +349,7 @@ html {
     text-transform: uppercase;
     padding: 0.5rem 3rem;
     border-radius: 3rem;
-    margin: 2rem 0rem 1rem 0rem;
+    margin: 1rem 0rem 0rem 0rem;
     border: 0.2rem solid black;
     border-bottom-width: 0.4rem;
     border-right-width: 0.4rem;
@@ -285,24 +372,44 @@ html {
       font-size: 1.2rem;
       margin: 0.5rem 0rem 0rem 0rem;
     }
+    @include screenView(small) {
+      //(665px)
+      font-size: 1.5rem;
+      margin: 1rem 0rem 0.5rem 0rem;
+    }
   }
 
   &__div2 {
-    width: 55%;
-    margin-left: -5rem;
+    width: 60%;
 
-    @include screenView(medium-big) {
-      //(1030px)
-      margin-right: -8rem;
-      margin-left: 0rem;
+    @include screenView(medium) {
+      //(877px)
+      width: 70%;
     }
 
     &__img {
       width: 100%;
 
-      @include screenView(medium-big) {
-        //(1030px)
-        width: 90%;
+      @include screenView(big-small) {
+        //(1251px)
+        width: 100%;
+      }
+
+      @include screenView(medium) {
+        //(877px)
+        width: 80%;
+        margin-left: 8rem;
+      }
+
+      @include screenView(small) {
+        //(665px)
+        width: 80%;
+        margin-left: 5rem;
+      }
+      @include screenView(smallest) {
+        //(459)
+        width: 105%;
+        margin-left: 0rem;
       }
     }
   }
@@ -341,6 +448,36 @@ html {
       @include screenView(medium) {
         //(1030px)
         font-size: 1rem;
+      }
+      @include screenView(small) {
+        //(665px)
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+//conteiner3
+.container3 {
+  @include display_flex_align_justify_gap($flow: column, $justify: center);
+  margin: 5rem 0rem;
+
+  &__div1 {
+    @include display_flex_align_justify_gap($flow: row, $justify: left);
+    width: 60%;
+  }
+  &__div2 {
+    @include display_flex_align_justify_gap($display: grid);
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(2, 50%);
+    width: 60%;
+
+    &__div2 {
+      @include display_flex_align_justify_gap();
+      grid-column: 2;
+      grid-row: span 2;
+      & img {
+        width: 80%;
       }
     }
   }
