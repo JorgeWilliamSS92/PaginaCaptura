@@ -82,7 +82,8 @@ $gray-lighten: lighten($gray, 10%);
   box-sizing: border-box;
 }
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 62.5%;
 }
 
@@ -127,7 +128,7 @@ html {
     }
     @include screenView(medium) {
       //(877px)
-      width: 90%;
+      width: 95%;
     }
     @include screenView(medium-small) {
       //(813px)
@@ -397,13 +398,13 @@ html {
 
       @include screenView(medium) {
         //(877px)
-        width: 80%;
-        margin-left: 8rem;
+        width: 90%;
+        margin-left: 6rem;
       }
 
       @include screenView(small) {
         //(665px)
-        width: 80%;
+        // width: 80%;
         margin-left: 5rem;
       }
       @include screenView(smallest) {
@@ -465,12 +466,140 @@ html {
   &__div1 {
     @include display_flex_align_justify_gap($flow: row, $justify: left);
     width: 60%;
+    margin-bottom: 3rem;
+
+    @include screenView(biggest) {
+      //(1654px)
+      width: 65%;
+    }
+    @include screenView(big) {
+      //(1251px)
+      width: 70%;
+    }
+    @include screenView(big-small) {
+      //(1270px)
+      width: 80%;
+    }
+
+    @include screenView(medium-big) {
+      //(1030px)
+      width: 95%;
+    }
+    @include screenView(medium) {
+      //(877px)
+      width: 99%;
+    }
+    @include screenView(medium-small) {
+      //(813px)
+    }
+    @include screenView(small) {
+      //(665px)
+      @include display_flex_align_justify_gap($flow: column, $gap: 3rem);
+      // width: 100%;
+    }
+
+    &__svg {
+      position: relative;
+      & svg {
+        width: 6rem;
+        height: 6rem;
+        font-weight: 700;
+        color: $yellow;
+      }
+      & svg:last-child {
+        margin-left: -4.5rem;
+      }
+    }
+    &__h1 {
+      font-size: 5rem;
+      font-weight: 100;
+      & span {
+        font-weight: 700;
+        color: $blue-darken;
+      }
+    }
   }
   &__div2 {
-    @include display_flex_align_justify_gap($display: grid);
+    @include display_flex_align_justify_gap($display: grid, $gap: 0rem);
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(2, 50%);
     width: 60%;
+    margin-bottom: 3rem;
+
+    @include screenView(biggest) {
+      //(1654px)
+      width: 65%;
+    }
+    @include screenView(big) {
+      //(1251px)
+      width: 70%;
+    }
+    @include screenView(big-small) {
+      //(1270px)
+      width: 80%;
+    }
+
+    @include screenView(medium-big) {
+      //(1030px)
+      width: 95%;
+    }
+    @include screenView(medium) {
+      //(877px)
+      width: 99%;
+    }
+    @include screenView(medium-small) {
+      //(813px)
+      grid-template-columns: repeat(2, 33%);
+      grid-template-rows: repeat(3, 50%);
+
+      .container3 {
+        width: max-content;
+        &__div2__div2 {
+          grid-column: 1/2;
+          grid-row: 3/3;
+          align-self: center;
+        }
+      }
+    }
+    @include screenView(small) {
+      @include display_flex_align_justify_gap($flow: column, $gap: 3rem);
+
+      //(665px)
+      // width: 100%;
+    }
+    //CONTINUE FROM HERE *******************
+    &__div1,
+    &__div3,
+    &__div4,
+    &__div5 {
+      margin-bottom: 5rem;
+      height: 15rem;
+      width: 35rem;
+      & div {
+        @include display_flex_align_justify_gap(
+          $flow: row,
+          $justify: left,
+          $gap: 2rem
+        );
+        color: $blue-darken;
+        margin-bottom: 1rem;
+
+        & svg {
+          width: 4rem;
+          height: 4rem;
+        }
+        & h2 {
+          font-size: 2.5rem;
+        }
+      }
+      & p {
+        font-size: 1.8rem;
+        color: $gray;
+        & span {
+          font-weight: 700;
+        }
+      }
+    }
 
     &__div2 {
       @include display_flex_align_justify_gap();
