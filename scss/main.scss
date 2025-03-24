@@ -458,7 +458,7 @@ html {
   }
 }
 
-//conteiner3
+//container3
 .container3 {
   @include display_flex_align_justify_gap($flow: column, $justify: center);
   margin: 5rem 0rem;
@@ -491,11 +491,12 @@ html {
     }
     @include screenView(medium-small) {
       //(813px)
+      margin-bottom: 0rem;
     }
     @include screenView(small) {
       //(665px)
-      @include display_flex_align_justify_gap($flow: column, $gap: 3rem);
-      // width: 100%;
+      @include display_flex_align_justify_gap($flow: row, $gap: 0rem);
+      width: 100%;
     }
 
     &__svg {
@@ -505,14 +506,35 @@ html {
         height: 6rem;
         font-weight: 700;
         color: $yellow;
+
+        @include screenView(small) {
+          //(665px)
+          width: 4rem;
+          height: 4rem;
+        }
       }
       & svg:last-child {
         margin-left: -4.5rem;
+
+        @include screenView(small) {
+          //(665px)
+          margin-left: -3rem;
+        }
       }
     }
     &__h1 {
       font-size: 5rem;
       font-weight: 100;
+
+      @include screenView(medium-small) {
+        //(813px)
+        font-size: 4rem;
+      }
+      @include screenView(small) {
+        //(665px)
+        font-size: 3rem;
+      }
+
       & span {
         font-weight: 700;
         color: $blue-darken;
@@ -524,7 +546,6 @@ html {
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(2, 50%);
     width: 60%;
-    margin-bottom: 3rem;
 
     @include screenView(biggest) {
       //(1654px)
@@ -549,24 +570,39 @@ html {
     }
     @include screenView(medium-small) {
       //(813px)
-      grid-template-columns: repeat(2, 33%);
+      grid-template-columns: repeat(2, 50%);
       grid-template-rows: repeat(3, 50%);
+      margin-top: -5rem;
 
       .container3 {
         width: max-content;
         &__div2__div2 {
-          grid-column: 1/2;
+          grid-column: span 2;
           grid-row: 3/3;
           align-self: center;
         }
       }
     }
     @include screenView(small) {
-      @include display_flex_align_justify_gap($flow: column, $gap: 3rem);
-
       //(665px)
-      // width: 100%;
+      grid-template-columns: repeat(1, 60%);
+      grid-template-rows: repeat(5, 85%);
+      text-align: justify;
+
+      .container3 {
+        width: max-content;
+        &__div2__div2 {
+          grid-column: 1;
+          grid-row: 5;
+          align-self: center;
+        }
+      }
     }
+
+    @include screenView(smallest) {
+      grid-template-columns: repeat(1, 85%);
+    }
+
     //CONTINUE FROM HERE *******************
     &__div1,
     &__div3,
@@ -574,7 +610,16 @@ html {
     &__div5 {
       margin-bottom: 5rem;
       height: 15rem;
-      width: 35rem;
+      width: 50%;
+
+      @include screenView(medium-small) {
+        //(813px)
+        height: 0rem;
+        margin-bottom: 0rem;
+      }
+
+      @include screenView(small) {
+      }
       & div {
         @include display_flex_align_justify_gap(
           $flow: row,
@@ -583,7 +628,7 @@ html {
         );
         color: $blue-darken;
         margin-bottom: 1rem;
-
+        width: max-content;
         & svg {
           width: 4rem;
           height: 4rem;
@@ -595,6 +640,7 @@ html {
       & p {
         font-size: 1.8rem;
         color: $gray;
+        width: 190%;
         & span {
           font-weight: 700;
         }
@@ -602,12 +648,32 @@ html {
     }
 
     &__div2 {
-      @include display_flex_align_justify_gap();
+      @include display_flex_align_justify_gap($gap: 2rem);
       grid-column: 2;
-      grid-row: span 2;
+      grid-row: span 3;
+
+      @include screenView(small) {
+        grid-column: 1;
+        grid-row: 5;
+      }
+
       & img {
-        width: 80%;
+        width: 100%;
+        @include screenView(medium-small) {
+          //(813px)
+          width: 30%;
+          margin-top: 25%;
+        }
+        @include screenView(small) {
+          //(813px)
+          width: 50%;
+          margin-top: 30%;
+        }
       }
     }
   }
+}
+
+//container4
+.container4 {
 }
