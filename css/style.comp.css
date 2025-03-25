@@ -331,13 +331,13 @@ html {
   padding: 0.5rem 3rem;
   border-radius: 3rem;
   margin: 1rem 0rem 0rem 0rem;
-  border: 0.2rem solid black;
+  border: 0.2rem solid rgb(99.5, 74.7624309392, 0);
   border-bottom-width: 0.4rem;
   border-right-width: 0.4rem;
   cursor: pointer;
 }
 .container1__button:hover {
-  border: 0.3rem solid black;
+  border: 0.3rem solid rgb(99.5, 74.7624309392, 0);
 }
 @media (max-width: 1654px) {
   .container1__button {
@@ -664,7 +664,7 @@ html {
   }
 }
 .container3__div2__div2 img {
-  width: 100%;
+  width: 90%;
 }
 @media (max-width: 830px) {
   .container3__div2__div2 img {
@@ -677,6 +677,102 @@ html {
     width: 50%;
     margin-top: 30%;
   }
+}
+
+.container4 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  margin: 15rem 0rem;
+}
+.container4__master {
+  width: 60%;
+}
+.container4__section1 {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+.container4__section1__div {
+  position: relative;
+}
+.container4__section1__div svg {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  font-weight: 700;
+  color: #ffd24a;
+  top: -1.5rem;
+}
+.container4__section1__div svg:first-child {
+  top: -4rem;
+}
+.container4__section1__h1 {
+  margin-left: 7rem;
+  font-size: 5rem;
+  font-weight: 100;
+}
+.container4__section1__h1 span {
+  color: #256783;
+  font-weight: 700;
+}
+.container4__section2 {
+  display: grid;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 90%;
+  margin-left: 5rem;
+}
+.container4__section2__img1 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+.container4__section2 img {
+  width: 100%;
+  border-radius: 3rem;
+  padding: 2rem;
+  transition: 0.2s ease-in-out;
+}
+.container4__section2 img:hover {
+  width: 100%;
+  padding: 0rem;
+  border-radius: 1rem;
+}
+.container4__section3 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+.container4__section3__button {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 5rem 0rem;
+  padding: 1rem 3rem;
+  background-color: #ffd24a;
+  border-radius: 2rem;
+  font-weight: 700;
+  border: 0.2rem solid rgb(99.5, 74.7624309392, 0);
+  border-bottom-width: 0.45rem;
+  border-right-width: 0.45rem;
+  cursor: pointer;
+}
+.container4__section3__button:hover {
+  border: 0.3rem solid rgb(99.5, 74.7624309392, 0);
 }
 
 /*# sourceMappingURL=style.comp.css.map */

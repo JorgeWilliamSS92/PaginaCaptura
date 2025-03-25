@@ -351,13 +351,13 @@ html {
     padding: 0.5rem 3rem;
     border-radius: 3rem;
     margin: 1rem 0rem 0rem 0rem;
-    border: 0.2rem solid black;
+    border: 0.2rem solid darken($yellow, 45%);
     border-bottom-width: 0.4rem;
     border-right-width: 0.4rem;
     cursor: pointer;
 
     &:hover {
-      border: 0.3rem solid black;
+      border: 0.3rem solid darken($yellow, 45%);
     }
 
     @include screenView(biggest) {
@@ -658,7 +658,7 @@ html {
       }
 
       & img {
-        width: 100%;
+        width: 90%;
         @include screenView(medium-small) {
           //(813px)
           width: 30%;
@@ -676,4 +676,87 @@ html {
 
 //container4
 .container4 {
+  @include display_flex_align_justify_gap($flow: column, $justify: center);
+  margin: 15rem 0rem;
+
+  &__master {
+    width: 60%;
+  }
+
+  &__section1 {
+    @include display_flex_align_justify_gap($flow: row);
+    margin-bottom: 4rem;
+    width: 100%;
+
+    &__div {
+      position: relative;
+
+      & svg {
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        font-weight: 700;
+        color: $yellow;
+        top: -1.5rem;
+      }
+      & svg:first-child {
+        top: -4rem;
+      }
+    }
+    &__h1 {
+      margin-left: 7rem;
+      font-size: 5rem;
+      font-weight: 100;
+
+      & span {
+        color: $blue-darken;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__section2 {
+    @include display_flex_align_justify_gap($display: grid, $gap: 0rem);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 90%;
+    margin-left: 5rem;
+
+    &__img1 {
+      @include display_flex_align_justify_gap();
+    }
+
+    & img {
+      width: 100%;
+      border-radius: 3rem;
+      padding: 2rem;
+      transition: 0.2s ease-in-out;
+    }
+    & img:hover {
+      width: 100%;
+      padding: 0rem;
+      border-radius: 1rem;
+    }
+  }
+  &__section3 {
+    @include display_flex_align_justify_gap();
+
+    &__button {
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin: 5rem 0rem;
+      padding: 1rem 3rem;
+      background-color: $yellow;
+      border-radius: 2rem;
+      font-weight: 700;
+      border: 0.2rem solid darken($yellow, 45%);
+      border-bottom-width: 0.45rem;
+      border-right-width: 0.45rem;
+      cursor: pointer;
+
+      &:hover {
+        border: 0.3rem solid darken($yellow, 45%);
+      }
+    }
+  }
 }
