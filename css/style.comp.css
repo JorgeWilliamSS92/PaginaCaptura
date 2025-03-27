@@ -9,7 +9,7 @@
     }
     @include screenView(medium) { //(877px)
     }
-    @include screenView(medium-small) { //(813px)
+    @include screenView(medium-small) { //(830px)
     }
       @include screenView(small) { //(665px)
       }
@@ -580,22 +580,20 @@ html {
 @media (max-width: 830px) {
   .container3__div2 {
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(3, 50%);
-    margin-top: -5rem;
+    grid-template-rows: repeat(3, auto);
   }
   .container3__div2 .container3 {
-    width: max-content;
+    width: fit-content;
   }
   .container3__div2 .container3__div2__div2 {
     grid-column: span 2;
-    grid-row: 3/3;
+    grid-row: 3;
     align-self: center;
   }
 }
 @media (max-width: 665px) {
   .container3__div2 {
     grid-template-columns: repeat(1, 60%);
-    grid-template-rows: repeat(5, 85%);
     text-align: justify;
   }
   .container3__div2 .container3 {
@@ -604,7 +602,6 @@ html {
   .container3__div2 .container3__div2__div2 {
     grid-column: 1;
     grid-row: 5;
-    align-self: center;
   }
 }
 @media (max-width: 459px) {
@@ -614,12 +611,10 @@ html {
 }
 .container3__div2__div1, .container3__div2__div3, .container3__div2__div4, .container3__div2__div5 {
   margin-bottom: 5rem;
-  height: 15rem;
   width: 50%;
 }
 @media (max-width: 830px) {
   .container3__div2__div1, .container3__div2__div3, .container3__div2__div4, .container3__div2__div5 {
-    height: 0rem;
     margin-bottom: 0rem;
   }
 }
@@ -629,6 +624,7 @@ html {
   align-items: center;
   justify-content: left;
   gap: 2rem;
+  margin-top: 5rem;
   color: #256783;
   margin-bottom: 1rem;
   width: max-content;
@@ -653,29 +649,21 @@ html {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  grid-column: 2;
+  gap: 0rem;
   grid-row: span 3;
-}
-@media (max-width: 665px) {
-  .container3__div2__div2 {
-    grid-column: 1;
-    grid-row: 5;
-  }
 }
 .container3__div2__div2 img {
   width: 90%;
 }
 @media (max-width: 830px) {
   .container3__div2__div2 img {
-    width: 30%;
-    margin-top: 25%;
+    width: 35%;
+    padding-top: 5rem;
   }
 }
 @media (max-width: 665px) {
   .container3__div2__div2 img {
-    width: 50%;
-    margin-top: 30%;
+    width: 70%;
   }
 }
 
@@ -685,10 +673,51 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0rem;
-  margin: 15rem 0rem;
+  margin: 0rem 0rem;
 }
 .container4__master {
   width: 60%;
+}
+@media (max-width: 1654px) {
+  .container4__master {
+    width: 65%;
+  }
+}
+@media (max-width: 1379px) {
+  .container4__master {
+    width: 70%;
+  }
+}
+@media (max-width: 1270px) {
+  .container4__master {
+    width: 80%;
+  }
+}
+@media (max-width: 1105px) {
+  .container4__master {
+    width: 95%;
+  }
+}
+@media (max-width: 877px) {
+  .container4__master {
+    width: 99%;
+    margin: 0rem 0rem;
+  }
+}
+@media (max-width: 830px) {
+  .container4__master {
+    margin-bottom: 0rem;
+  }
+}
+@media (max-width: 665px) {
+  .container4__master {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    width: 100%;
+  }
 }
 .container4__section1 {
   display: flex;
@@ -710,13 +739,36 @@ html {
   color: #ffd24a;
   top: -1.5rem;
 }
+@media (max-width: 877px) {
+  .container4__section1__div svg:last-child {
+    display: none;
+  }
+}
 .container4__section1__div svg:first-child {
   top: -4rem;
+}
+@media (max-width: 877px) {
+  .container4__section1__div svg:first-child {
+    width: 4rem;
+    height: 4rem;
+    top: -2rem;
+  }
 }
 .container4__section1__h1 {
   margin-left: 7rem;
   font-size: 5rem;
   font-weight: 100;
+}
+@media (max-width: 877px) {
+  .container4__section1__h1 {
+    font-size: 3rem;
+    margin-left: 5rem;
+  }
+}
+@media (max-width: 830px) {
+  .container4__section1__h1 {
+    font-size: 2.5rem;
+  }
 }
 .container4__section1__h1 span {
   color: #256783;
@@ -770,6 +822,16 @@ html {
   border-bottom-width: 0.45rem;
   border-right-width: 0.45rem;
   cursor: pointer;
+}
+@media (max-width: 877px) {
+  .container4__section3__button {
+    font-size: 1.8;
+  }
+}
+@media (max-width: 830px) {
+  .container4__section3__button {
+    font-size: 1.6rem;
+  }
 }
 .container4__section3__button:hover {
   border: 0.3rem solid rgb(99.5, 74.7624309392, 0);
