@@ -43,11 +43,11 @@ $gray-lighten: lighten($gray, 10%);
       @content;
     }
   } @else if $parameter == "big-small" {
-    @media (max-width: 1270px) {
+    @media (max-width: 1290px) {
       @content;
     }
   } @else if $parameter == "big" {
-    @media (max-width: 1379px) {
+    @media (max-width: 1410px) {
       @content;
     }
   } @else if $parameter == "biggest" {
@@ -526,12 +526,17 @@ html {
       font-size: 5rem;
       font-weight: 100;
 
+      @include screenView(medium) {
+        //(877px)
+        font-size: 4rem;
+        margin-left: 0rem;
+      }
       @include screenView(medium-small) {
         //(830px)
-        font-size: 4rem;
+        font-size: 3.5rem;
       }
       @include screenView(small) {
-        //(665px)
+        //665
         font-size: 3rem;
       }
 
@@ -718,13 +723,13 @@ html {
     }
     @include screenView(small) {
       //(665px)
-      @include display_flex_align_justify_gap($flow: row, $gap: 0rem);
+      @include display_flex_align_justify_gap($flow: column, $gap: 0rem);
       width: 100%;
     }
   }
 
   &__section1 {
-    @include display_flex_align_justify_gap($flow: row);
+    @include display_flex_align_justify_gap($flow: row, $justify: left);
     margin-bottom: 4rem;
     width: 100%;
 
@@ -762,15 +767,20 @@ html {
       margin-left: 7rem;
       font-size: 5rem;
       font-weight: 100;
+      text-align: left;
 
       @include screenView(medium) {
         //(877px)
-        font-size: 3rem;
+        font-size: 4rem;
         margin-left: 5rem;
       }
       @include screenView(medium-small) {
         //(830px)
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+      }
+      @include screenView(small) {
+        //665
+        font-size: 3rem;
       }
 
       & span {
@@ -787,18 +797,44 @@ html {
     width: 90%;
     margin-left: 5rem;
 
+    @include screenView(small) {
+      //(665px)
+      @include display_flex_align_justify_gap($display: flex, $gap: 2rem);
+      margin-left: 0rem;
+
+      &__img1,
+      &__img2,
+      &__img3,
+      &__img4 {
+        @include display_flex_align_justify_gap();
+      }
+    }
+    @include screenView(smallest) {
+      //(459)
+    }
+
+    /*
     &__img1 {
       @include display_flex_align_justify_gap();
     }
-
+    */
     & img {
       width: 100%;
       border-radius: 3rem;
       padding: 2rem;
       transition: 0.2s ease-in-out;
+
+      @include screenView(small) {
+        //(665px)
+        width: 90%;
+        border-radius: 1rem;
+        padding: 0rem;
+      }
+      @include screenView(smallest) {
+        //(459)
+      }
     }
     & img:hover {
-      width: 100%;
       padding: 0rem;
       border-radius: 1rem;
     }
@@ -825,7 +861,12 @@ html {
       }
       @include screenView(medium-small) {
         //(830px)
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+      }
+      @include screenView(smallest) {
+        //(830px)
+        font-size: 1.4rem;
+        padding: 0.5rem;
       }
 
       &:hover {

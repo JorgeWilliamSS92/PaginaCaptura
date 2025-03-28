@@ -62,12 +62,12 @@ html {
     width: 65%;
   }
 }
-@media (max-width: 1379px) {
+@media (max-width: 1410px) {
   .container1__div-master {
     width: 70%;
   }
 }
-@media (max-width: 1270px) {
+@media (max-width: 1290px) {
   .container1__div-master {
     width: 80%;
   }
@@ -113,12 +113,12 @@ html {
   border-radius: 3rem;
   margin-right: -5rem;
 }
-@media (max-width: 1379px) {
+@media (max-width: 1410px) {
   .container1__div {
     width: 45%;
   }
 }
-@media (max-width: 1270px) {
+@media (max-width: 1290px) {
   .container1__div {
     max-width: 60%;
   }
@@ -199,7 +199,7 @@ html {
     font-size: 4rem;
   }
 }
-@media (max-width: 1270px) {
+@media (max-width: 1290px) {
   .container1__h1 {
     font-size: 3.5rem;
   }
@@ -373,7 +373,7 @@ html {
 .container1__div2__img {
   width: 100%;
 }
-@media (max-width: 1270px) {
+@media (max-width: 1290px) {
   .container1__div2__img {
     width: 100%;
   }
@@ -466,12 +466,12 @@ html {
     width: 65%;
   }
 }
-@media (max-width: 1379px) {
+@media (max-width: 1410px) {
   .container3__div1 {
     width: 70%;
   }
 }
-@media (max-width: 1270px) {
+@media (max-width: 1290px) {
   .container3__div1 {
     width: 80%;
   }
@@ -528,9 +528,15 @@ html {
   font-size: 5rem;
   font-weight: 100;
 }
-@media (max-width: 830px) {
+@media (max-width: 877px) {
   .container3__div1__h1 {
     font-size: 4rem;
+    margin-left: 0rem;
+  }
+}
+@media (max-width: 830px) {
+  .container3__div1__h1 {
+    font-size: 3.5rem;
   }
 }
 @media (max-width: 665px) {
@@ -557,12 +563,12 @@ html {
     width: 65%;
   }
 }
-@media (max-width: 1379px) {
+@media (max-width: 1410px) {
   .container3__div2 {
     width: 70%;
   }
 }
-@media (max-width: 1270px) {
+@media (max-width: 1290px) {
   .container3__div2 {
     width: 80%;
   }
@@ -683,12 +689,12 @@ html {
     width: 65%;
   }
 }
-@media (max-width: 1379px) {
+@media (max-width: 1410px) {
   .container4__master {
     width: 70%;
   }
 }
-@media (max-width: 1270px) {
+@media (max-width: 1290px) {
   .container4__master {
     width: 80%;
   }
@@ -712,7 +718,7 @@ html {
 @media (max-width: 665px) {
   .container4__master {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
     gap: 0rem;
@@ -723,7 +729,7 @@ html {
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   gap: 0rem;
   margin-bottom: 4rem;
   width: 100%;
@@ -758,16 +764,22 @@ html {
   margin-left: 7rem;
   font-size: 5rem;
   font-weight: 100;
+  text-align: left;
 }
 @media (max-width: 877px) {
   .container4__section1__h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-left: 5rem;
   }
 }
 @media (max-width: 830px) {
   .container4__section1__h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 665px) {
+  .container4__section1__h1 {
+    font-size: 3rem;
   }
 }
 .container4__section1__h1 span {
@@ -784,13 +796,28 @@ html {
   grid-template-rows: 1fr 1fr;
   width: 90%;
   margin-left: 5rem;
+  /*
+  &__img1 {
+    @include display_flex_align_justify_gap();
+  }
+  */
 }
-.container4__section2__img1 {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0rem;
+@media (max-width: 665px) {
+  .container4__section2 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: 0rem;
+  }
+  .container4__section2__img1, .container4__section2__img2, .container4__section2__img3, .container4__section2__img4 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+  }
 }
 .container4__section2 img {
   width: 100%;
@@ -798,8 +825,14 @@ html {
   padding: 2rem;
   transition: 0.2s ease-in-out;
 }
+@media (max-width: 665px) {
+  .container4__section2 img {
+    width: 90%;
+    border-radius: 1rem;
+    padding: 0rem;
+  }
+}
 .container4__section2 img:hover {
-  width: 100%;
   padding: 0rem;
   border-radius: 1rem;
 }
@@ -830,7 +863,13 @@ html {
 }
 @media (max-width: 830px) {
   .container4__section3__button {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 459px) {
+  .container4__section3__button {
+    font-size: 1.4rem;
+    padding: 0.5rem;
   }
 }
 .container4__section3__button:hover {
