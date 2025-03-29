@@ -1,6 +1,7 @@
 //colors:
 $blue-lighten: #038fc2; //use on the check
 $yellow: #ffd24a; //used on the buttons
+$yellow-Strong: #eebe2a; //used for the spans in section 5
 $blue-darken: #256783; //used on the title, subtitles ...
 $blue-darkest: #1c415c; //used on container1
 $gray: #4b4d4d;
@@ -93,7 +94,7 @@ html {
   background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/64957938a8a62d8071397ed5_pgc-python-bg1.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 40%;
+  background-position: 50%;
   padding-top: 5rem;
 
   @include screenView(medium-big) {
@@ -690,7 +691,7 @@ html {
 //container4
 .container4 {
   @include display_flex_align_justify_gap($flow: column, $justify: center);
-  margin: 0rem 0rem;
+  margin: 5rem 0rem 10rem 0rem;
 
   &__master {
     width: 60%;
@@ -794,8 +795,8 @@ html {
     @include display_flex_align_justify_gap($display: grid, $gap: 0rem);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 90%;
-    margin-left: 5rem;
+    width: 100%;
+    // margin-left: 5rem;
 
     @include screenView(small) {
       //(665px)
@@ -872,6 +873,69 @@ html {
       &:hover {
         border: 0.3rem solid darken($yellow, 45%);
       }
+    }
+  }
+}
+
+//container5
+.container5 {
+  @include display_flex_align_justify_gap();
+  background-image: url("../imgs/Banner\ de\ fundo\ container\ 5.webp");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 100%;
+  background-size: cover;
+  margin-top: -10rem;
+  padding-top: 10rem;
+
+  &__div1 {
+    @include display_flex_align_justify_gap($flow: row, $gap: 2rem);
+    width: 60%;
+
+    &__description {
+      @include display_flex_align_justify_gap($gap: 2rem);
+      width: 50%;
+      color: white;
+
+      & h1 {
+        font-size: 2.5rem;
+        border-left: 0.5rem solid $yellow-Strong;
+        padding-left: 2rem;
+      }
+      & p {
+        font-size: 1.8rem;
+        // text-align: justify;
+      }
+      & span {
+        color: $yellow-Strong;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+//container6
+.container6 {
+  @include display_flex_align_justify_gap();
+  background-color: lighten($gray, 70%);
+  padding: 5rem 0rem;
+
+  &__div {
+    width: 60%;
+    @include display_flex_align_justify_gap(
+      $flow: row,
+      $justify: right,
+      $gap: 2rem
+    );
+    padding-right: 5rem;
+
+    & img {
+      width: 4rem;
+    }
+    & a {
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: $gray;
     }
   }
 }
