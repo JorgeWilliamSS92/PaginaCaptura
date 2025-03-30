@@ -888,23 +888,104 @@ html {
   margin-top: -10rem;
   padding-top: 10rem;
 
+  @include screenView(small) {
+    //(665px)
+    margin-top: -25rem;
+    padding-top: 20rem;
+  }
+
   &__div1 {
     @include display_flex_align_justify_gap($flow: row, $gap: 2rem);
     width: 60%;
 
+    @include screenView(biggest) {
+      //(1654px)
+      width: 65%;
+    }
+    @include screenView(big) {
+      //(1251px)
+      width: 70%;
+    }
+    @include screenView(big-small) {
+      //(1270px)
+      width: 80%;
+    }
+
+    @include screenView(medium-big) {
+      //(1105px)
+      width: 95%;
+
+      & img {
+        width: 45%;
+      }
+    }
+    @include screenView(medium) {
+      //(877px)
+      margin: 0rem 0rem;
+      & img {
+        width: 40%;
+      }
+    }
+    @include screenView(medium-small) {
+      //(813px)
+      margin-bottom: 0rem;
+    }
+    @include screenView(small) {
+      //(665px)
+      @include display_flex_align_justify_gap($flow: column, $gap: 0rem);
+      width: 100%;
+    }
+
     &__description {
       @include display_flex_align_justify_gap($gap: 2rem);
-      width: 50%;
+      width: 55%;
       color: white;
+
+      @include screenView(medium) {
+        //(877px)
+        width: 60%;
+        margin: 0rem 0rem;
+      }
+      @include screenView(medium-small) {
+        //(813px)
+        margin-bottom: 0rem;
+      }
+      @include screenView(small) {
+        //(665px)
+        @include display_flex_align_justify_gap($flow: column, $gap: 2rem);
+        min-width: 35rem;
+        padding-bottom: 2rem;
+      }
+      @include screenView(smallest) {
+        //(459)
+        min-width: 80%;
+      }
 
       & h1 {
         font-size: 2.5rem;
         border-left: 0.5rem solid $yellow-Strong;
         padding-left: 2rem;
+
+        @include screenView(medium-big) {
+          //(1105px)
+          font-size: 2rem;
+        }
+        @include screenView(medium-small) {
+          //(830px)
+          font-size: 1.8rem;
+        }
       }
       & p {
         font-size: 1.8rem;
         // text-align: justify;
+        @include screenView(medium-big) {
+          //(1105px)
+          font-size: 1.6rem;
+        }
+        @include screenView(medium-small) {
+          //(830px)
+          font-size: 1.4rem;
+        }
       }
       & span {
         color: $yellow-Strong;
@@ -920,6 +1001,15 @@ html {
   background-color: lighten($gray, 70%);
   padding: 5rem 0rem;
 
+  @include screenView(medium-big) {
+    //(1105px)
+    padding: 2rem 0rem;
+  }
+  @include screenView(small) {
+    //(665px)
+    padding: 0rem;
+  }
+
   &__div {
     width: 60%;
     @include display_flex_align_justify_gap(
@@ -929,13 +1019,59 @@ html {
     );
     padding-right: 5rem;
 
+    @include screenView(biggest) {
+      //(1654px)
+      width: 65%;
+    }
+    @include screenView(big) {
+      //(1251px)
+      width: 70%;
+    }
+    @include screenView(big-small) {
+      //(1270px)
+      width: 80%;
+    }
+
+    @include screenView(medium-big) {
+      //(1105px)
+      width: 95%;
+      padding: 2rem 0rem;
+    }
+    @include screenView(medium) {
+      //(877px)
+      margin: 0rem 0rem;
+    }
+    @include screenView(medium-small) {
+      //(813px)
+      margin-bottom: 0rem;
+    }
+    @include screenView(small) {
+      //(665px)
+      @include display_flex_align_justify_gap($flow: column, $gap: 0rem);
+      width: 100%;
+    }
+
     & img {
       width: 4rem;
+      @include screenView(medium-big) {
+        //(1105px)
+        width: 3rem;
+      }
     }
     & a {
       font-size: 1.6rem;
       text-decoration: none;
       color: $gray;
+
+      @include screenView(medium-big) {
+        //(1105px)
+        font-size: 1.4;
+      }
+
+      @include screenView(medium-small) {
+        //(813px)
+        font-size: 1.2rem;
+      }
     }
   }
 }
