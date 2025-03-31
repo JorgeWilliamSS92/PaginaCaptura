@@ -88,6 +88,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  position: relative;
+}
+
 //container1
 .container1 {
   @include display_flex_align_justify_gap($gap: 0rem);
@@ -1071,6 +1075,63 @@ html {
       @include screenView(medium-small) {
         //(813px)
         font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+//container0
+.container0 {
+  position: relative;
+
+  &__div {
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.63);
+    backdrop-filter: blur(5px);
+    height: 100dvh;
+    width: 100vw;
+
+    &__div2 {
+      @include display_flex_align_justify_gap($gap: 0rem);
+      position: fixed;
+      top: 40%;
+      left: 40%;
+      background-color: white;
+      border-radius: 2rem;
+      box-shadow: inset 0rem 0rem 1rem lighten($gray, 40%);
+      padding: 2rem 2rem;
+      width: 20%;
+
+      & svg {
+        color: $yellow-Strong;
+        border: 0.15rem solid black;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(0.5rem, -0.5rem);
+        cursor: pointer;
+      }
+      & input {
+        width: 100%;
+        font-size: 1.6rem;
+        border-radius: 2rem;
+        border: 0.2rem solid $yellow-Strong;
+        margin-top: 1rem;
+        padding: 0.4rem 0rem 0.4rem 1rem;
+      }
+
+      & button {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 700;
+        padding: 0.5rem 2rem;
+        border-radius: 2rem;
+        background-color: $yellow-Strong;
+        margin-top: 2rem;
+        cursor: pointer;
       }
     }
   }
