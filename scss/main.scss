@@ -1082,26 +1082,35 @@ body {
 
 //container0
 .container0 {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &__div {
+    display: none;
     position: fixed;
+    align-items: center;
+    justify-content: center;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.63);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.856);
     backdrop-filter: blur(5px);
-    height: 100dvh;
-    width: 100vw;
 
     &__div2 {
-      @include display_flex_align_justify_gap($gap: 0rem);
-      position: fixed;
-      top: 40%;
-      left: 40%;
+      @include display_flex_align_justify_gap($gap: 0.5rem);
+      position: relative;
       background-color: white;
       border-radius: 2rem;
       box-shadow: inset 0rem 0rem 1rem lighten($gray, 40%);
-      padding: 2rem 2rem;
-      width: 20%;
+      padding: 4rem 3rem;
+      width: 40rem;
+
+      @include screenView(smallest) {
+        //(459)
+        width: 35rem;
+      }
 
       & svg {
         color: $yellow-Strong;
@@ -1116,22 +1125,32 @@ body {
       }
       & input {
         width: 100%;
-        font-size: 1.6rem;
+        font-size: 2rem;
         border-radius: 2rem;
         border: 0.2rem solid $yellow-Strong;
         margin-top: 1rem;
         padding: 0.4rem 0rem 0.4rem 1rem;
+
+        @include screenView(smallest) {
+          //(459)
+          font-size: 1.6rem;
+        }
       }
 
       & button {
         text-transform: uppercase;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         font-weight: 700;
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 3rem;
         border-radius: 2rem;
         background-color: $yellow-Strong;
         margin-top: 2rem;
         cursor: pointer;
+
+        @include screenView(smallest) {
+          //(459)
+          font-size: 1.6rem;
+        }
       }
     }
   }

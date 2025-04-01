@@ -1116,30 +1116,39 @@ body {
 }
 
 .container0 {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container0__div {
+  display: none;
   position: fixed;
+  align-items: center;
+  justify-content: center;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.63);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.856);
   backdrop-filter: blur(5px);
-  height: 100dvh;
-  width: 100vw;
 }
 .container0__div__div2 {
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  gap: 0rem;
-  position: fixed;
-  top: 40%;
-  left: 40%;
+  gap: 0.5rem;
+  position: relative;
   background-color: white;
   border-radius: 2rem;
   box-shadow: inset 0rem 0rem 1rem rgb(176.9868421053, 179.0131578947, 179.0131578947);
-  padding: 2rem 2rem;
-  width: 20%;
+  padding: 4rem 3rem;
+  width: 40rem;
+}
+@media (max-width: 459px) {
+  .container0__div__div2 {
+    width: 35rem;
+  }
 }
 .container0__div__div2 svg {
   color: #eebe2a;
@@ -1154,21 +1163,31 @@ body {
 }
 .container0__div__div2 input {
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 2rem;
   border-radius: 2rem;
   border: 0.2rem solid #eebe2a;
   margin-top: 1rem;
   padding: 0.4rem 0rem 0.4rem 1rem;
 }
+@media (max-width: 459px) {
+  .container0__div__div2 input {
+    font-size: 1.6rem;
+  }
+}
 .container0__div__div2 button {
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 3rem;
   border-radius: 2rem;
   background-color: #eebe2a;
   margin-top: 2rem;
   cursor: pointer;
+}
+@media (max-width: 459px) {
+  .container0__div__div2 button {
+    font-size: 1.6rem;
+  }
 }
 
 /*# sourceMappingURL=style.comp.css.map */
