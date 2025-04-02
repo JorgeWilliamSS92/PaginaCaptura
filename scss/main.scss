@@ -7,6 +7,7 @@ $blue-darkest: #1c415c; //used on container1
 $gray: #4b4d4d;
 $gray-darken: darken($gray, 10%);
 $gray-lighten: lighten($gray, 10%);
+$gray-background: #f1f1f1;
 
 @mixin display_flex_align_justify_gap(
   $display: flex,
@@ -90,6 +91,8 @@ html {
 
 body {
   position: relative;
+
+  background-color: $gray-background;
 }
 
 //container1
@@ -154,7 +157,7 @@ body {
     @include display_flex_align_justify_gap($gap: 0rem);
     flex-wrap: wrap;
     width: 45%;
-    background-color: white;
+    background-color: $gray-background;
     box-shadow: inset 0rem 0rem 2rem $gray-lighten;
     position: relative;
     padding: 2rem;
@@ -263,7 +266,7 @@ body {
 
   &__p {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     color: darken($gray, 10%);
     margin-bottom: 1rem;
@@ -320,7 +323,7 @@ body {
       color: $blue-lighten;
     }
     & span {
-      font-weight: 700;
+      font-weight: 600;
       color: $gray;
     }
   }
@@ -351,7 +354,7 @@ body {
   &__button {
     background-color: $yellow;
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     padding: 0.5rem 3rem;
     border-radius: 3rem;
@@ -509,7 +512,7 @@ body {
       & svg {
         width: 6rem;
         height: 6rem;
-        font-weight: 700;
+        font-weight: 600;
         color: $yellow;
 
         @include screenView(small) {
@@ -546,7 +549,7 @@ body {
       }
 
       & span {
-        font-weight: 700;
+        font-weight: 600;
         color: $blue-darken;
       }
     }
@@ -661,7 +664,7 @@ body {
         color: $gray;
         width: 190%;
         & span {
-          font-weight: 700;
+          font-weight: 600;
         }
       }
     }
@@ -745,7 +748,7 @@ body {
         position: absolute;
         width: 6rem;
         height: 6rem;
-        font-weight: 700;
+        font-weight: 600;
         color: $yellow;
         top: -1.5rem;
 
@@ -790,7 +793,7 @@ body {
 
       & span {
         color: $blue-darken;
-        font-weight: 700;
+        font-weight: 600;
       }
     }
   }
@@ -854,7 +857,7 @@ body {
       padding: 1rem 3rem;
       background-color: $yellow;
       border-radius: 2rem;
-      font-weight: 700;
+      font-weight: 600;
       border: 0.2rem solid darken($yellow, 45%);
       border-bottom-width: 0.45rem;
       border-right-width: 0.45rem;
@@ -943,7 +946,7 @@ body {
     &__description {
       @include display_flex_align_justify_gap($gap: 2rem);
       width: 55%;
-      color: white;
+      color: $gray-background;
 
       @include screenView(medium) {
         //(877px)
@@ -993,7 +996,7 @@ body {
       }
       & span {
         color: $yellow-Strong;
-        font-weight: 700;
+        font-weight: 600;
       }
     }
   }
@@ -1002,7 +1005,7 @@ body {
 //container6
 .container6 {
   @include display_flex_align_justify_gap();
-  background-color: lighten($gray, 70%);
+  background-color: $gray-background;
   padding: 5rem 0rem;
 
   @include screenView(medium-big) {
@@ -1140,7 +1143,7 @@ body {
       & button {
         text-transform: uppercase;
         font-size: 1.8rem;
-        font-weight: 700;
+        font-weight: 600;
         padding: 0.5rem 3rem;
         border-radius: 2rem;
         background-color: $yellow-Strong;

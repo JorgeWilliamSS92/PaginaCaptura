@@ -29,6 +29,7 @@ html {
 
 body {
   position: relative;
+  background-color: #f1f1f1;
 }
 
 .container1 {
@@ -110,7 +111,7 @@ body {
   gap: 0rem;
   flex-wrap: wrap;
   width: 45%;
-  background-color: white;
+  background-color: #f1f1f1;
   box-shadow: inset 0rem 0rem 2rem rgb(100.1644736842, 102.8355263158, 102.8355263158);
   position: relative;
   padding: 2rem;
@@ -228,7 +229,7 @@ body {
 }
 .container1__p {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   color: rgb(49.8355263158, 51.1644736842, 51.1644736842);
   margin-bottom: 1rem;
@@ -296,7 +297,7 @@ body {
   color: #038fc2;
 }
 .container1__ul span {
-  font-weight: 700;
+  font-weight: 600;
   color: #4b4d4d;
 }
 .container1__h2 {
@@ -330,7 +331,7 @@ body {
 .container1__button {
   background-color: #ffd24a;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   padding: 0.5rem 3rem;
   border-radius: 3rem;
@@ -511,7 +512,7 @@ body {
 .container3__div1__svg svg {
   width: 6rem;
   height: 6rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffd24a;
 }
 @media (max-width: 665px) {
@@ -549,7 +550,7 @@ body {
   }
 }
 .container3__div1__h1 span {
-  font-weight: 700;
+  font-weight: 600;
   color: #256783;
 }
 .container3__div2 {
@@ -652,7 +653,7 @@ body {
   width: 190%;
 }
 .container3__div2__div1 p span, .container3__div2__div3 p span, .container3__div2__div4 p span, .container3__div2__div5 p span {
-  font-weight: 700;
+  font-weight: 600;
 }
 .container3__div2__div2 {
   display: flex;
@@ -745,7 +746,7 @@ body {
   position: absolute;
   width: 6rem;
   height: 6rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffd24a;
   top: -1.5rem;
 }
@@ -788,7 +789,7 @@ body {
 }
 .container4__section1__h1 span {
   color: #256783;
-  font-weight: 700;
+  font-weight: 600;
 }
 .container4__section2 {
   display: grid;
@@ -853,7 +854,7 @@ body {
   padding: 1rem 3rem;
   background-color: #ffd24a;
   border-radius: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   border: 0.2rem solid rgb(99.5, 74.7624309392, 0);
   border-bottom-width: 0.45rem;
   border-right-width: 0.45rem;
@@ -960,7 +961,7 @@ body {
   justify-content: center;
   gap: 2rem;
   width: 55%;
-  color: white;
+  color: #f1f1f1;
 }
 @media (max-width: 877px) {
   .container5__div1__description {
@@ -1019,7 +1020,7 @@ body {
 }
 .container5__div1__description span {
   color: #eebe2a;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .container6 {
@@ -1028,7 +1029,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0rem;
-  background-color: rgb(254.4934210526, 254.5065789474, 254.5065789474);
+  background-color: #f1f1f1;
   padding: 5rem 0rem;
 }
 @media (max-width: 1105px) {
@@ -1177,7 +1178,7 @@ body {
 .container0__div__div2 button {
   text-transform: uppercase;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   padding: 0.5rem 3rem;
   border-radius: 2rem;
   background-color: #eebe2a;
