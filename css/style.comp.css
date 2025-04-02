@@ -157,7 +157,7 @@ body {
 }
 .container1__img {
   position: absolute;
-  background-color: white;
+  background-color: #f1f1f1;
   box-shadow: 0rem 0rem 1rem #4b4d4d;
   padding: 1rem;
   border-radius: 50%;
@@ -1140,7 +1140,7 @@ body {
   justify-content: center;
   gap: 0.5rem;
   position: relative;
-  background-color: white;
+  background-color: #f1f1f1;
   border-radius: 2rem;
   box-shadow: inset 0rem 0rem 1rem rgb(176.9868421053, 179.0131578947, 179.0131578947);
   padding: 4rem 3rem;
@@ -1154,7 +1154,7 @@ body {
 .container0__div__div2 svg {
   color: #eebe2a;
   border: 0.15rem solid black;
-  background-color: white;
+  background-color: #f1f1f1;
   border-radius: 50%;
   position: absolute;
   top: 0;

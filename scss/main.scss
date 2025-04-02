@@ -200,7 +200,7 @@ body {
   }
   &__img {
     position: absolute;
-    background-color: white;
+    background-color: $gray-background;
     box-shadow: 0rem 0rem 1rem $gray;
     padding: 1rem;
     border-radius: 50%;
@@ -1104,7 +1104,7 @@ body {
     &__div2 {
       @include display_flex_align_justify_gap($gap: 0.5rem);
       position: relative;
-      background-color: white;
+      background-color: $gray-background;
       border-radius: 2rem;
       box-shadow: inset 0rem 0rem 1rem lighten($gray, 40%);
       padding: 4rem 3rem;
@@ -1118,7 +1118,7 @@ body {
       & svg {
         color: $yellow-Strong;
         border: 0.15rem solid black;
-        background-color: white;
+        background-color: $gray-background;
         border-radius: 50%;
         position: absolute;
         top: 0;
