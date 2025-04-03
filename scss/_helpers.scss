@@ -1,0 +1,81 @@
+//colors:
+$blue-lighten: #038fc2; //use on the check
+$yellow: #ffd24a; //used on the buttons
+$yellow-Strong: #eebe2a; //used for the spans in section 5
+$blue-darken: #256783; //used on the title, subtitles ...
+$blue-darkest: #1c415c; //used on container1
+$gray: #4b4d4d;
+$gray-darken: darken($gray, 10%);
+$gray-lighten: lighten($gray, 10%);
+$gray-background: #f1f1f1;
+
+//mixin
+@mixin display_flex_align_justify_gap(
+  $display: flex,
+  $flow: column,
+  $align: center,
+  $justify: center,
+  $gap: 0rem
+) {
+  display: $display;
+  flex-flow: $flow;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+//screen view
+@mixin screenView($parameter) {
+  @if $parameter == "smallest" {
+    @media (max-width: 459px) {
+      @content;
+    }
+  } @else if $parameter == "small" {
+    @media (max-width: 665px) {
+      @content;
+    }
+  } @else if $parameter == "medium-small" {
+    @media (max-width: 830px) {
+      @content;
+    }
+  } @else if $parameter == "medium" {
+    @media (max-width: 877px) {
+      @content;
+    }
+  } @else if $parameter == "medium-big" {
+    @media (max-width: 1105px) {
+      @content;
+    }
+  } @else if $parameter == "big-small" {
+    @media (max-width: 1290px) {
+      @content;
+    }
+  } @else if $parameter == "big" {
+    @media (max-width: 1410px) {
+      @content;
+    }
+  } @else if $parameter == "biggest" {
+    @media (max-width: 1654px) {
+      @content;
+    }
+  }
+}
+
+/*
+  @include screenView(biggest) //{ (1654px)
+    }
+    @include screenView(big) { //(1251px)
+    }
+    @include screenView(big-small) { //(1270px)
+    }
+    @include screenView(medium-big) { //(1105px)
+    }
+    @include screenView(medium) { //(877px)
+    }
+    @include screenView(medium-small) { //(830px)
+    }
+      @include screenView(small) { //(665px)
+      }
+    @include screenView(smallest) { //(459)
+    }
+*/
