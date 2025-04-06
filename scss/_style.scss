@@ -546,7 +546,6 @@ body {
       grid-template-columns: repeat(1, 85%);
     }
 
-    //CONTINUE FROM HERE *******************
     &__div1,
     &__div3,
     &__div4,
@@ -749,10 +748,10 @@ body {
     }
     */
     & img {
-      width: 100%;
+      width: 95%;
       border-radius: 3rem;
       padding: 2rem;
-      transition: 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out;
 
       @include screenView(small) {
         //(665px)
@@ -765,8 +764,9 @@ body {
       }
     }
     & img:hover {
-      padding: 0rem;
-      border-radius: 1rem;
+      // padding: 0rem;
+      // border-radius: 1rem;
+      transform: scale(1.05);
     }
   }
   &__section3 {
