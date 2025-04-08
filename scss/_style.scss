@@ -1020,12 +1020,16 @@ body {
         border-radius: 2rem;
         border: 0.2rem solid $yellow-Strong;
         margin-top: 1rem;
-        padding: 0.4rem 0rem 0.4rem 1rem;
+        padding: 0.5rem 0rem 0.5rem 1.5rem;
 
         @include screenView(smallest) {
           //(459)
           font-size: 1.6rem;
         }
+      }
+      & input:focus-visible {
+        outline: none;
+        box-shadow: inset 0rem 0rem 0.8rem $yellow-Strong;
       }
 
       & button {
