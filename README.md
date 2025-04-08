@@ -1,4 +1,4 @@
-# :computer: Criação de página de captura
+# :computer: Criação página de captura
 
 ## Introdução
 
