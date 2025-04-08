@@ -70,9 +70,6 @@ body {
       //(665px)
       width: 100%;
     }
-    // @include screenView(smallest) {
-    //   //(459)
-    // }
   }
 
   &__div {
@@ -334,7 +331,6 @@ body {
 
       @include screenView(small) {
         //(665px)
-        // width: 80%;
         margin-left: 5rem;
       }
       @include screenView(smallest) {
@@ -508,16 +504,6 @@ body {
       grid-template-columns: repeat(2, 50%);
       grid-template-rows: repeat(3, auto);
 
-      // &__div2 {
-      //   &__div1,
-      //   &__div2,
-      //   &__div3,
-      //   &__div4,
-      //   &__div5 {
-      //     padding-top: 2rem;
-      //   }
-      // }
-
       .container3 {
         width: fit-content;
         &__div2__div2 {
@@ -551,12 +537,9 @@ body {
     &__div4,
     &__div5 {
       margin-bottom: 5rem;
-      // height: 15rem;
       width: 50%;
 
       @include screenView(medium-small) {
-        //(813px)
-        // height: 0rem;
         margin-bottom: 0rem;
       }
 
@@ -593,12 +576,6 @@ body {
     &__div2 {
       @include display_flex_align_justify_gap();
       grid-row: span 3;
-
-      @include screenView(small) {
-        //(830px)
-        &__div2 {
-        }
-      }
 
       & img {
         width: 90%;
@@ -724,7 +701,6 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     width: 100%;
-    // margin-left: 5rem;
 
     @include screenView(small) {
       //(665px)
@@ -742,11 +718,6 @@ body {
       //(459)
     }
 
-    /*
-    &__img1 {
-      @include display_flex_align_justify_gap();
-    }
-    */
     & img {
       width: 95%;
       border-radius: 3rem;
@@ -759,13 +730,8 @@ body {
         border-radius: 1rem;
         padding: 0rem;
       }
-      @include screenView(smallest) {
-        //(459)
-      }
     }
     & img:hover {
-      // padding: 0rem;
-      // border-radius: 1rem;
       transform: scale(1.05);
     }
   }
@@ -906,7 +872,7 @@ body {
       }
       & p {
         font-size: 1.8rem;
-        // text-align: justify;
+
         @include screenView(medium-big) {
           //(1105px)
           font-size: 1.6rem;

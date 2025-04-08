@@ -800,11 +800,6 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   width: 100%;
-  /*
-  &__img1 {
-    @include display_flex_align_justify_gap();
-  }
-  */
 }
 @media (max-width: 665px) {
   .container4__section2 {
@@ -824,10 +819,10 @@ body {
   }
 }
 .container4__section2 img {
-  width: 100%;
+  width: 95%;
   border-radius: 3rem;
   padding: 2rem;
-  transition: 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 @media (max-width: 665px) {
   .container4__section2 img {
@@ -837,8 +832,7 @@ body {
   }
 }
 .container4__section2 img:hover {
-  padding: 0rem;
-  border-radius: 1rem;
+  transform: scale(1.05);
 }
 .container4__section3 {
   display: flex;
