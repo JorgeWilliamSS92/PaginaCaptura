@@ -38,6 +38,7 @@ body {
   &__div-master {
     @include display_flex_align_justify_gap($flow: row, $gap: 0rem);
     width: 60%;
+    margin-top: 6rem;
 
     @include screenView(biggest) {
       //(1654px)
@@ -63,8 +64,8 @@ body {
     @include screenView(medium-small) {
       //(830px)
       @include display_flex_align_justify_gap($flow: column, $gap: 3rem);
-      margin-top: 5rem;
       width: 95%;
+      margin-top: 11rem;
     }
     @include screenView(small) {
       //(665px)
@@ -82,6 +83,7 @@ body {
     padding: 2rem;
     border-radius: 3rem;
     margin-right: -5rem;
+    margin-top: -10rem;
 
     @include screenView(big) {
       //(1251px)
@@ -142,8 +144,6 @@ body {
       //(877px)
       width: 4.5rem;
       height: 4.5rem;
-      right: -1rem;
-      top: -1rem;
     }
     @include screenView(small) {
       //(665px)
@@ -156,7 +156,7 @@ body {
     font-size: 4.5rem;
     text-align: center;
     color: $blue-darkest;
-    margin-bottom: 1rem;
+    margin: 0rem 0rem;
     width: 95%;
 
     @include screenView(biggest) {
@@ -449,7 +449,7 @@ body {
       }
     }
     &__h1 {
-      font-size: 5rem;
+      font-size: 4rem;
       font-weight: 100;
 
       @include screenView(medium) {
@@ -671,7 +671,7 @@ body {
     }
     &__h1 {
       margin-left: 7rem;
-      font-size: 5rem;
+      font-size: 4rem;
       font-weight: 100;
       text-align: left;
 
@@ -785,7 +785,13 @@ body {
 
   @include screenView(small) {
     //(665px)
-    margin-top: -25rem;
+    margin-top: -28rem;
+    padding-top: 25rem;
+  }
+
+  @include screenView(smallest) {
+    //(459)
+    margin-top: -30rem;
     padding-top: 20rem;
   }
 
@@ -829,6 +835,13 @@ body {
       //(665px)
       @include display_flex_align_justify_gap($flow: column, $gap: 0rem);
       width: 100%;
+      & img {
+        width: 65%;
+      }
+
+      @include screenView(smallest) {
+        //(459)
+      }
     }
 
     &__description {
@@ -868,6 +881,7 @@ body {
         @include screenView(medium-small) {
           //(830px)
           font-size: 1.8rem;
+          margin-top: 3rem;
         }
       }
       & p {
@@ -998,6 +1012,12 @@ body {
       padding: 4rem 3rem;
       width: 40rem;
 
+      @include screenView(small) {
+        //(665px)
+        padding: 2rem 1.5rem;
+        margin: 0rem 1rem;
+      }
+
       @include screenView(smallest) {
         //(459)
         width: 35rem;
@@ -1044,7 +1064,7 @@ body {
 
         @include screenView(smallest) {
           //(459)
-          font-size: 1.6rem;
+          font-size: 1.4rem;
         }
       }
     }
