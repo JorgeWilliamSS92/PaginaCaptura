@@ -1,5 +1,3 @@
-import { upper, lower, symbols } from "./structure.js";
-
 export const check = (info, type) => {
   if (type === "name") {
     if (info.length < 3) {

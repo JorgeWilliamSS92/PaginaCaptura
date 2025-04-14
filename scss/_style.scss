@@ -316,7 +316,7 @@ body {
     }
 
     &__img {
-      width: 100%;
+      width: max-content;
 
       @include screenView(big-small) {
         //(1251px)
@@ -346,7 +346,7 @@ body {
 .container2 {
   @include display_flex_align_justify_gap();
   background-color: lighten($gray-lighten, 45%);
-  padding: 5rem 0rem;
+  padding: 2rem 0rem;
 
   @include screenView(medium-big) {
     //(1030px)
@@ -365,7 +365,7 @@ body {
     &__p {
       font-size: 1.5rem;
       font-weight: 100;
-      color: $gray-lighten;
+      color: darken(gray, 30%);
 
       @include screenView(medium-big) {
         //(1030px)

@@ -376,7 +376,7 @@ body {
   }
 }
 .container1__div2__img {
-  width: 100%;
+  width: max-content;
 }
 @media (max-width: 1290px) {
   .container1__div2__img {
@@ -408,7 +408,7 @@ body {
   justify-content: center;
   gap: 0rem;
   background-color: rgb(215.7401315789, 216.7598684211, 216.7598684211);
-  padding: 5rem 0rem;
+  padding: 2rem 0rem;
 }
 @media (max-width: 1105px) {
   .container2 {
@@ -431,7 +431,7 @@ body {
 .container2__div3__p {
   font-size: 1.5rem;
   font-weight: 100;
-  color: rgb(100.1644736842, 102.8355263158, 102.8355263158);
+  color: rgb(51.5, 51.5, 51.5);
 }
 @media (max-width: 1105px) {
   .container2__div3__p {
