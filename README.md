@@ -7,7 +7,7 @@ O intuito é criar uma página estática para captura de novos inscritos para a 
 
 ## Link para projeto
 
-[Inscrição Jornada Python]()
+[Inscrição Jornada Python](https://jorgewilliamss92.github.io/PaginaCaptura/)
 
 ## Tecnologias usadas
 
